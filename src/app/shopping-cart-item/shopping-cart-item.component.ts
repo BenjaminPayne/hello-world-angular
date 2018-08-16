@@ -8,7 +8,7 @@ import { CartItem } from '../shopping-cart/cartItem';
   styleUrls: ['./shopping-cart-item.component.css']
 })
 export class ShoppingCartItemComponent {
-  private _item: CartItem;
+  private _item: CartItem = undefined;
 
   @Input()
   set item(item: CartItem) {

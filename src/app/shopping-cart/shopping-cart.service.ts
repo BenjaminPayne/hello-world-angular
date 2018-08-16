@@ -1,7 +1,6 @@
 import { Product } from "../product/product";
 import { Injectable } from "@angular/core";
 import { CartItem } from "./cartItem";
-import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
 
 @Injectable()
 export class ShoppingCartService {

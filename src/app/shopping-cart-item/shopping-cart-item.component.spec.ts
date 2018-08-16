@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MaterialModule } from '../material/material.module'
 import { ShoppingCartItemComponent } from './shopping-cart-item.component';
 
 describe('ShoppingCartItemComponent', () => {
@@ -8,9 +9,9 @@ describe('ShoppingCartItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShoppingCartItemComponent ]
-    })
-    .compileComponents();
+      declarations: [ShoppingCartItemComponent],
+      imports: [MaterialModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

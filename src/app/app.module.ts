@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
@@ -8,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingCartItemComponent } from './shopping-cart-item/shopping-cart-item.component';
 import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [ShoppingCartService],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 <div id=cart-list>
   <p>Cart:</p>
-  <app-shopping-cart-item *ngFor="let item of getCartItems()" [item]="item"></app-shopping-cart-item>
+  <mat-list>
+    <app-shopping-cart-item *ngFor="let item of getCartItems()" [item]="item"></app-shopping-cart-item>
+  </mat-list>
 </div>

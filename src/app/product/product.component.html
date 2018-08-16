@@ -1,10 +1,18 @@
-<div class="productBox">
-  <p class="description">{{product.getDescription()}}</p>
-  <p class="title">{{product.getName()}}</p>
-  <img class="product" src={{product.getImageUrl()}}>
-  <div>
-    <button (click)="addToCard(product, quantity)" class="productButton">Add</button>
-    <input class="quantity" type="number" [(ngModel)]="quantity">
-  </div>
+<mat-card>
+    <mat-card-header>
+      <p class="title">{{product.getName()}}</p>
+    </mat-card-header>
 
-</div>
+    <img class="product" mat-card-image src={{product.getImageUrl()}}>
+
+    <mat-card-content>
+      <p class="description">{{product.getDescription()}}</p>
+    </mat-card-content>
+
+    <mat-form-field>
+      <input matInput class="quantityInput" type="number" [(ngModel)]="quantity">
+    </mat-form-field>
+    
+    <button mat-raised-button class="productButton" (click)="addToCard(product, quantity)">Add</button>
+    
+</mat-card>

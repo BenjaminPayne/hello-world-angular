@@ -1,0 +1,28 @@
+.productBox {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "title"
+        "picture"
+        "description"
+        "button"
+}
+
+.product {
+    max-height: 300px;
+    grid-area: picture;
+}
+
+.productButton {
+    grid-area: button;
+}
+
+.title {
+    font-weight: bold;
+    grid-area: title;
+}
+
+.description {
+    grid-area: description;
+}

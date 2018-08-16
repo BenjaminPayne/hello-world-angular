@@ -1,0 +1,13 @@
+#shop {
+    display: grid;
+    grid-template-areas:
+        "products products products cart"
+}
+
+#products {
+    grid-area: products;
+}
+
+#cart {
+    grid-area: cart;
+}

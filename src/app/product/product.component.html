@@ -1,0 +1,10 @@
+<div class="productBox">
+  <p class="description">{{product.getDescription()}}</p>
+  <p class="title">{{product.getName()}}</p>
+  <img class="product" src={{product.getImageUrl()}}>
+  <div>
+    <button (click)="addToCard(product, quantity)" class="productButton">Add</button>
+    <input class="quantity" type="number" [(ngModel)]="quantity">
+  </div>
+
+</div>

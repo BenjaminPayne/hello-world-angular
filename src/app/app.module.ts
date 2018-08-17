@@ -10,6 +10,11 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingCartItemComponent } from './shopping-cart-item/shopping-cart-item.component';
 import { ShoppingCartService } from './shopping-cart/shopping-cart.service';
 import { MaterialModule } from './material/material.module';
+import { ShopfrontComponent } from './shopfront/shopfront.component';
+import { SummaryComponent } from './summary/summary.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { SummaryItemComponent } from './summary-item/summary-item.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +22,17 @@ import { MaterialModule } from './material/material.module';
     ProductsComponent,
     ProductComponent,
     ShoppingCartComponent,
-    ShoppingCartItemComponent
+    ShoppingCartItemComponent,
+    ShopfrontComponent,
+    SummaryComponent,
+    SummaryItemComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [ShoppingCartService],
   bootstrap: [AppComponent]

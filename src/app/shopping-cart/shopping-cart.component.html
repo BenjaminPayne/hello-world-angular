@@ -3,4 +3,10 @@
   <mat-list>
     <app-shopping-cart-item *ngFor="let item of getCartItems()" [item]="item"></app-shopping-cart-item>
   </mat-list>
+  <div id="button">
+    <button mat-raised-button color="primary" routerLink='/summary'>
+      <mat-icon>shopping-basket</mat-icon>
+      Summary
+    </button>
+  </div>
 </div>

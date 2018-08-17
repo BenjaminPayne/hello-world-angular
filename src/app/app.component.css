@@ -1,13 +1,7 @@
-#shop {
-    display: grid;
-    grid-template-areas:
-        "products products products cart"
-}
-
-#products {
-    grid-area: products;
-}
-
-#cart {
-    grid-area: cart;
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }

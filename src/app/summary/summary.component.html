@@ -1,5 +1,5 @@
 <div id="summary">
-  <h2>Thanks for your order!</h2>
-  <p>Your order contains the following items:</p>
-  <app-summary-item></app-summary-item>
+  <h2>Thank you for your order!</h2>
+  <p id="description">Your order contains the following items:</p>
+  <app-summary-item *ngFor="let item of getCartItems()" [item]="item"></app-summary-item>
 </div>

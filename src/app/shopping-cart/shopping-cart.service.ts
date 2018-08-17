@@ -1,6 +1,7 @@
 import { Product } from "../product/product";
 import { Injectable } from "@angular/core";
 import { CartItem } from "./cartItem";
+import { Observable, from, of } from "rxjs";
 
 @Injectable()
 export class ShoppingCartService {
@@ -26,5 +27,9 @@ export class ShoppingCartService {
 
     public getCurrentItems(): Array<CartItem> {
         return this.currentItems;
+    }
+
+    public getCurrentItemsAsync(): Observable<CartItem[]> {
+        return of(this.currentItems);
     }
 }

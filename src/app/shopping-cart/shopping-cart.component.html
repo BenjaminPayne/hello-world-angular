@@ -1,10 +1,11 @@
 <div id=cart-list>
   <p>Cart:</p>
   <mat-list>
-    <app-shopping-cart-item *ngFor="let item of getCartItems()" [item]="item"></app-shopping-cart-item>
+    <app-shopping-cart-item *ngFor="let item of cart" [item]="item"></app-shopping-cart-item>
   </mat-list>
+  <p [hidden]="!showError">No items in basket! Go back and shop more!</p>
   <div id="button">
-    <button mat-raised-button color="primary" routerLink='/summary'>
+    <button mat-raised-button color="primary" (click)="verifyCart()">
       <mat-icon>shopping-basket</mat-icon>
       Summary
     </button>
